@@ -1,0 +1,8 @@
+---
+name: ASE (Atomic Simulation Environment)
+category: Interactive Apps
+role: batch_connect
+description: |
+  This will launch an Interactive ASE session.
+
+  
