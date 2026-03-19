@@ -65,13 +65,11 @@ xfsettingsd --sm-client-disable &
 # Start up xfce desktop (block until user logs out of desktop)
 #xfce4-session
 
+# Launch Python
 module load ${python_module}
 
 # This forces avogadro to launch full screen
-#matchbox-window-manager &
-
-# Launch Python
-module load Python/3.11.6-foss-2023a  
+matchbox-window-manager &
 
 # Launch the ASE GUI
 ase gui
