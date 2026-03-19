@@ -69,4 +69,4 @@ xfsettingsd --sm-client-disable &
 module load ${python_module}
 
 # Launch the ASE GUI
-ase gui
+ase gui ${path_to_file}

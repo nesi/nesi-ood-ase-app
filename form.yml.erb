@@ -39,6 +39,9 @@ attributes:
     options:
       - [ "Python 3.11.6", "Python/3.11.6-foss-2023a" ]
     cacheable: false  # default to latest (first in list)
+  path_to_file:
+    widget: text_field
+    label: "Full path to file (Don't put anything in to launch blank ASE GUI)"
   account:
     label: "Project Code"
     widget: select
@@ -82,6 +85,7 @@ attributes:
 form:
   - cluster
   - python_module
+  - path_to_file
   - account
   - bc_vnc_resolution
   - bc_num_hours
