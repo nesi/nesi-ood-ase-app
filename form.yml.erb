@@ -20,8 +20,6 @@ attributes:
     options:
       - [
           "Kubernetes", "my-k8s-cluster",
-          data-hide-gpu: true,
-          data-set-gpu: 'none',
         ]
 <% if has_slurm_apps %>
       - ["Slurm HPC", "nesi_tdc_hpc"]
@@ -66,21 +64,11 @@ attributes:
     display: true
   num_mem:
     label: Memory per job (GB)
-    max: 32
+    max: 16
     min: 2
     step: 1
     value: 2
     widget: number_field
-    display: true
-  gpu:
-    label: GPU
-    widget: select
-    options:
-      - 'none'
-      - [ "L4 (24 GB VRAM, aimed at AI workloads, up to single precision)", 'L4' ]
-      - [ "H100 (96 GB VRAM, recommend submitting as Slurm jobs due to potential wait times)", "H100" ]
-    help: |
-      **WARNING**: selecting a GPU can significantly increase the time it takes for your session to start!
     display: true
 form:
   - cluster
@@ -91,4 +79,3 @@ form:
   - bc_num_hours
   - num_cores
   - num_mem
-  - gpu

@@ -154,12 +154,6 @@ batch_connect:
     CTRSCRIPT
 
     export APPTAINER_BIND="$HOME,/nesi,/opt/nesi,/etc/passwd,/etc/group,/var/lib/sss/pipes,/etc/nsswitch.conf,/var/run/munge/munge.socket.2,/var/run/slurm/conf,/var/spool/slurmd/conf-cache"
-
-<%- if gpu != "none" -%>
-    export NV_FLAG="--nv"
-<%- else -%>
-    export NV_FLAG=""
-<%- end -%>
     
     apptainer exec --writable-tmpfs $NV_FLAG /opt/nesi/containers/nesi-ood-base/nesi-ondemand-vnc-0.8.0.aimg /bin/bash container.sh
 
@@ -173,8 +167,4 @@ script:
     - "<%= num_cores %>"
     - "--mem"
     - "<%= num_mem %>G"
-<%- if gpu != "none" -%>
-    - "--gpus-per-node"
-    - "<%= gpu %>"
-<%- end -%>
 <%- end -%>

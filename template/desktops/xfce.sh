@@ -62,9 +62,6 @@ xsetroot -solid "#D3D3D3" &
 xfsettingsd --sm-client-disable &
 #xfce4-panel --sm-client-disable &
 
-# Start up xfce desktop (block until user logs out of desktop)
-#xfce4-session
-
 # Launch Python
 module load ${python_module}
 
