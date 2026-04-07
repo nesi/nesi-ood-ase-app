@@ -31,15 +31,6 @@ attributes:
 
   bc_vnc_resolution:
     required: true
-  python_module:
-    widget: select
-    label: "Python module"
-    options:
-      - [ "Python 3.11.6", "Python/3.11.6-foss-2023a" ]
-    cacheable: false  # default to latest (first in list)
-  path_to_file:
-    widget: text_field
-    label: "Full path to file (Don't put anything in to launch blank ASE GUI)"
   account:
     label: "Project Code"
     widget: select
@@ -49,6 +40,15 @@ attributes:
       <%- end %>
     required: true
     display: true
+  python_module:
+    widget: select
+    label: "Python module"
+    options:
+      - [ "Python 3.11.6", "Python/3.11.6-foss-2023a" ]
+    cacheable: false  # default to latest (first in list)
+  path_to_file:
+    widget: text_field
+    label: "Full path to file (Don't put anything in to launch blank ASE GUI)"
   bc_num_hours:
     max: 24
     min: 1
@@ -72,9 +72,9 @@ attributes:
     display: true
 form:
   - cluster
+  - account
   - python_module
   - path_to_file
-  - account
   - bc_vnc_resolution
   - bc_num_hours
   - num_cores
