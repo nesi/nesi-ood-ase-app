@@ -1,6 +1,7 @@
 ---
 name: ASE (Atomic Simulation Environment)
-category: Chemistry
+category: App
+sub-category: Chemistry
 role: batch_connect
 description: |
   This will launch an Interactive ASE session.
